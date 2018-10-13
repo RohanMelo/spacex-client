@@ -1,0 +1,6 @@
+# Esse arquivo configura o editor
+# https://editorconfig.org/
+
+end_of_line = crlf
+indent_style = tab
+indent_size = 4

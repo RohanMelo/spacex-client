@@ -1,7 +1,6 @@
 import React from 'react';
 
-const MissionsId = (props) => {
-    console.log(props);
+const Mission = (props) => {
     return (
     <div>
         Showing mission with value of {props.match.params.id}
@@ -9,4 +8,4 @@ const MissionsId = (props) => {
     );
 }
 
-export default MissionsId;
+export default Mission;

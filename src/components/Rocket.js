@@ -1,7 +1,6 @@
 import React from 'react';
 
-const RocketsId = (props) => {
-    console.log(props);
+const Rocket = (props) => {
     return (
     <div>
         Showing Rocket with value of {props.match.params.id}
@@ -9,4 +8,4 @@ const RocketsId = (props) => {
     );
 }
 
-export default RocketsId;
+export default Rocket;

@@ -1,17 +1,35 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink as Link } from "react-router-dom";
 
 const Header = () => (
-    <header>
-        <h1>SpaceX Client</h1>
-        <NavLink to="/" activeClassName="is-active" exact={true}>Home</NavLink>
-        <NavLink to="/about" activeClassName="is-active">About</NavLink>
-        
-        <NavLink to="/launches" activeClassName="is-active" exact={true}>Launches</NavLink>
-        <NavLink to="/missions" activeClassName="is-active" exact={true}>Missions</NavLink>
-        <NavLink to="/rockets" activeClassName="is-active" exact={true}>Rockets</NavLink>
-
-    </header>
+  <header>
+    <div className="nav navbar" role="navigation" aria-label="main navigation">
+      <div className="navbar-brand">
+        <div className="navbar-item">
+          <Link to="/">SpaceX Tracker</Link>
+        </div>
+      </div>
+      <div className="navbar-menu">
+        <div className="navbar-end">
+          <div className="navbar-item">
+            <Link to="/about">About</Link>
+          </div>
+          <div className="navbar-item">
+            <Link to="/launches">Launches</Link>
+          </div>
+          <div className="navbar-item">
+            <Link to="/launchpads">Launchpads</Link>
+          </div>
+          <div className="navbar-item">
+            <Link to="/missions">Missions</Link>
+          </div>
+          <div className="navbar-item">
+            <Link to="/rockets">Rockets</Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 );
 
 export default Header;

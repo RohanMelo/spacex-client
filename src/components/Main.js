@@ -1,9 +1,16 @@
-import React from 'react';
+import React from "react";
 
-const Main = () => (
-    <div>
-        Página Principal
-    </div>
-);
+import MainHero from './MainHero';
+
+import launchData from "../mockdata/LAUNCH.json";
+
+const Main = () => {
+  return (
+    <section>
+      <MainHero launch={launchData} />
+      <MainHero launch={launchData} latest />
+    </section>
+  );
+};
 
 export default Main;
