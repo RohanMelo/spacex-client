@@ -4,11 +4,33 @@ import LaunchRocketCard from "./LaunchRocketCard";
 import LaunchLaunchpadCard from "./LaunchLaunchpadCard";
 import LaunchLinksCard from "./LaunchLinksCard";
 import YouTubeEmbed from "./YouTubeEmbed";
+import axios from 'axios';
+// import launchData from "../mockdata/LAUNCH.json"
 
-import launchData from "../mockdata/LAUNCH.json"
+class Launch extends React.Component {
+  state = {
+    launchData: {},
+    loading: true
+  }
+  componentDidMount() {
+    const flight_number = this.props.match.params.id;
+    axios.get(`https://api.spacexdata.com/v3/launches/${flight_number}`)
+      .then(res => {
+        this.setState({
+          launchData: res.data,
+          loading: false
+        }, error => {
+          console.log(error)
+        });
+      })
+  };
 
-const Launch = () => {
-  return (
+  render() {
+    const launchData = this.state.launchData;
+    
+  if (this.state.loading) return <h1>loading...</h1>
+
+  else return (
     <section>
       <div className="container" style={{ marginTop: "3rem" }}>
         <div className="level">
@@ -44,5 +66,6 @@ const Launch = () => {
     </section>
   );
 };
+}
 
 export default Launch;

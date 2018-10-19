@@ -1,11 +1,34 @@
-import React from "react";
+import React, { Component } from "react";
+import axios from 'axios';
 
 import RocketListItem from './RocketListItem'
 
-import rocketList from '../mockdata/ROCKETS.json';
+// import rocketList from '../mockdata/ROCKETS.json';
 
-const Rockets = () => (
-  <section>
+class Rockets extends Component { 
+  state = {
+    rocketList: {},
+    loading: true
+  };
+
+  componentDidMount() {
+    axios.get('https://api.spacexdata.com/v3/rockets')
+      .then(res => {
+        this.setState({
+          rocketList: res.data,
+          loading: false
+        }, error => {
+          console.log(error)
+        });
+      })
+  };
+
+  render() {
+    const rocketList = this.state.rocketList;
+
+    if (this.state.loading) return <h1>loading...</h1>
+    else return (
+    <section>
     <div className="container" style={{ marginTop: "3rem" }}>
       <h1 className="title">Foguetes</h1>
       <h2 className="subtitle">Todos os foguetes</h2>
@@ -19,6 +42,9 @@ const Rockets = () => (
       {/* TODO: Paginação */}
     </div>
   </section>
-);
+  );
+  }
+  }
+
 
 export default Rockets;
