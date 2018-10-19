@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import LaunchListItem from "./LaunchListItem";
+import LaunchListItem from "../components/LaunchListItem";
 
 // Lista com 19 lançamentos
 // import launchList from "../mockdata/LAUNCHES";

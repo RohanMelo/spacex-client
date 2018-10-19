@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
 
-import LaunchpadListItem from './LaunchpadListItem';
+import LaunchpadListItem from '../components/LaunchpadListItem';
 
 
 class Launchpads extends Component {

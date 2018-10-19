@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import MissionListItem from "./MissionListItem";
+import MissionListItem from "../components/MissionListItem";
 import axios from 'axios';
 
 // import missionList from "../mockdata/MISSIONS.json";

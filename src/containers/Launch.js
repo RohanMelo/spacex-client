@@ -1,9 +1,9 @@
 import React from "react";
 
-import LaunchRocketCard from "./LaunchRocketCard";
-import LaunchLaunchpadCard from "./LaunchLaunchpadCard";
-import LaunchLinksCard from "./LaunchLinksCard";
-import YouTubeEmbed from "./YouTubeEmbed";
+import LaunchRocketCard from "../components/LaunchRocketCard";
+import LaunchLaunchpadCard from "../components/LaunchLaunchpadCard";
+import LaunchLinksCard from "../components/LaunchLinksCard";
+import YouTubeEmbed from "../components/YouTubeEmbed";
 import axios from 'axios';
 // import launchData from "../mockdata/LAUNCH.json"
 

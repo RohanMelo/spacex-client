@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
 
-import RocketListItem from './RocketListItem'
+import RocketListItem from '../components/RocketListItem'
 
 // import rocketList from '../mockdata/ROCKETS.json';
 

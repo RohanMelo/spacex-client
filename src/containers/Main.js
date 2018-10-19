@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 
-import MainHero from './MainHero';
+import MainHero from '../components/MainHero';
 import axios from 'axios';
-import launchData from '../mockdata/LAUNCH.json'
 
 class Main extends Component {
   state = {
@@ -27,7 +26,7 @@ class Main extends Component {
     else return (
       <section>
         <MainHero launch={this.state.apiLaunch} />
-        <MainHero launch={launchData} latest />
+        <MainHero launch={this.state.apiLaunch} latest />
       </section>
     );
   };
