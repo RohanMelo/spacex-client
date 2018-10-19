@@ -4,17 +4,17 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from '../components/Footer';
 
-import Main from "../components/Main";
-import About from "../components/About";
-import Launches from "../components/Launches";
-import Launch from "../components/Launch";
-import Launchpads from '../components/Launchpads';
-import Launchpad from '../components/Launchpad';
-import Missions from "../components/Missions";
-import Mission from "../components/Mission";
-import Rockets from "../components/Rockets";
-import Rocket from "../components/Rocket";
-import NotFoundPage from "../components/NotFoundPage";
+import Main from "../containers/Main";
+import About from "../containers/About";
+import Launches from "../containers/Launches";
+import Launch from "../containers/Launch";
+import Launchpads from '../containers/Launchpads';
+import Launchpad from '../containers/Launchpad';
+import Missions from "../containers/Missions";
+import Mission from "../containers/Mission";
+import Rockets from "../containers/Rockets";
+import Rocket from "../containers/Rocket";
+import NotFoundPage from "../containers/NotFoundPage";
 
 const AppRouter = () => (
   <BrowserRouter>
